@@ -10,29 +10,29 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5224615589:AAFSp9poqPTnY4tLJS-PalUw9qMZybnQ75g")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6167892056:AAFHNc1Rf_DG-x3_Da5627XUQQQi-pwyfKo")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "1669750"))
+APP_ID = int(os.environ.get("APP_ID", "24533958"))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "0f53ee8c576281995d621194aec588d8")
+API_HASH = os.environ.get("API_HASH", "426fdc450ba65576b0923ab944a01ce5")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001738654185"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001731938199"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "831370530"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "1168051770"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://ramcool:ramcool@cluster0.6hxnajq.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://oneforthree4:wvxKt8POLYpqOZvN@cluster0.64jxpil.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001691551237"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -40,7 +40,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "718979130 831370530 967367094").split()):
+    for x in (os.environ.get("ADMINS", "1168051770 831370530").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -55,7 +55,7 @@ CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
 
 #Set true if you want Disable your Channel Posts Share button
-DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
+DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", 'True') == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
